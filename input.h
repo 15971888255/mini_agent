@@ -8,6 +8,6 @@ typedef struct Msg
 }Msg;
 #include<ncurses.h>
 
-void input();
+void input(WINDOW *win);
 
 #endif

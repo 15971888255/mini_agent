@@ -29,7 +29,7 @@ int main()
         draw_status(status_win,24,0);
         
         draw_input(input_win,30,0,"");
-        input();
+        input(chat_win);
         // c=wgetch(input_win);
         // {
         //     if(c == KEY_MOUSE)

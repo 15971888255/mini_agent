@@ -1,9 +1,10 @@
 #include "input.h"
+#include "command.h"
 
 char His[10][100];
 int a=0;
 
-void input()
+void input(WINDOW *win)
 {
     Msg msg;
     msg.len=0;
@@ -24,9 +25,9 @@ void input()
         if(ch == '\n')
         {
             msg.txt[msg.len-1]='\0';
-            if(msg.txt[0]=='\\')
+            if(msg.txt[0]=='/')
             {
-                
+                choose(win,msg.txt);
             }
             strcpy(His[a], msg.txt);
             a++;
